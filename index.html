@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi Tech Space - Kenya's Tech Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-gray-800">
+    
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-laptop-code text-3xl"></i>
+                    <h1 class="text-2xl md:text-3xl font-bold">Nairobi Tech Space</h1>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="hover:text-emerald-200 transition duration-300">Home</a></li>
+                    <li><a href="#featured" class="hover:text-emerald-200 transition duration-300">Featured</a></li>
+                    <li><a href="#categories" class="hover:text-emerald-200 transition duration-300">Categories</a></li>
+                    <li><a href="#recent" class="hover:text-emerald-200 transition duration-300">Recent Posts</a></li>
+                </ul>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <ul id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 pb-4">
+                <li><a href="#home" class="block py-2 hover:text-emerald-200">Home</a></li>
+                <li><a href="#featured" class="block py-2 hover:text-emerald-200">Featured</a></li>
+                <li><a href="#categories" class="block py-2 hover:text-emerald-200">Categories</a></li>
+                <li><a href="#recent" class="block py-2 hover:text-emerald-200">Recent Posts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="bg-gradient-to-r from-teal-600 to-emerald-600 text-white py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Nairobi Tech Space</h2>
+            <p class="text-xl md:text-2xl mb-8">Exploring Kenya's Innovation Ecosystem, Silicon Savannah Stories & Digital Transformation</p>
+            <button class="bg-white text-emerald-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Discover Stories</button>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section id="featured" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Featured Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Post 1 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500" alt="Nairobi Startups" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full">Startups</span>
+                            <span class="text-gray-500 text-sm ml-auto">7 min read</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Kenya's Fintech Revolution</h3>
+                        <p class="text-gray-600 mb-4">How Nairobi-based startups are transforming financial services across Africa. M-Pesa's legacy continues with innovative payment solutions and digital banking.</p>
+                        <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-800 inline-flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Featured Post 2 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500" alt="Tech Innovation" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Innovation</span>
+                            <span class="text-gray-500 text-sm ml-auto">6 min read</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Inside iHub and Nairobi Garage</h3>
+                        <p class="text-gray-600 mb-4">Exploring Kenya's premier innovation hubs where entrepreneurs collaborate, build, and scale their tech ventures in the heart of Silicon Savannah.</p>
+                        <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-800 inline-flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Featured Post 3 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500" alt="Tech Developers" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full">Developers</span>
+                            <span class="text-gray-500 text-sm ml-auto">5 min read</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Growing Tech Talent in Kenya</h3>
+                        <p class="text-gray-600 mb-4">From coding bootcamps to tech universities, how Kenya is nurturing the next generation of software developers and tech professionals.</p>
+                        <a href="#" class="text-emerald-600 font-semibold hover:text-emerald-800 inline-flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section id="categories" class="py-20 px-6 bg-slate-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Explore Categories</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-emerald-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-emerald-700 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-mobile-alt mr-2"></i>Fintech & M-Pesa
+                </span>
+                <span class="bg-teal-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-700 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-rocket mr-2"></i>Startups
+                </span>
+                <span class="bg-orange-500 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-orange-600 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-lightbulb mr-2"></i>Innovation Hubs
+                </span>
+                <span class="bg-red-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-red-700 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-seedling mr-2"></i>Agritech
+                </span>
+                <span class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-blue-700 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-graduation-cap mr-2"></i>EdTech
+                </span>
+                <span class="bg-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-purple-700 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-code mr-2"></i>Software Development
+                </span>
+                <span class="bg-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-pink-700 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-hospital mr-2"></i>HealthTech
+                </span>
+                <span class="bg-cyan-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-cyan-700 cursor-pointer transition duration-300 shadow-md">
+                    <i class="fas fa-shopping-cart mr-2"></i>E-Commerce
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Posts Section -->
+    <section id="recent" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Latest Updates</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Recent Post 1 -->
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Safaricom's 5G Expansion Across Nairobi</h3>
+                        <p class="text-gray-600 text-sm mb-2">How Kenya's leading telco is rolling out 5G infrastructure to accelerate digital innovation and connectivity in major urban centers.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>October 26, 2025</span>
+                            <span class="mx-3">•</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded text-xs">Fintech</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 md:mt-0 md:ml-6 text-emerald-600 font-semibold hover:text-emerald-800 whitespace-nowrap">Read →</a>
+                </div>
+                <!-- Recent Post 2 -->
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Twiga Foods: Revolutionizing Kenyan Agriculture</h3>
+                        <p class="text-gray-600 text-sm mb-2">The success story of how technology is connecting farmers directly to vendors, reducing waste and improving food distribution.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>October 24, 2025</span>
+                            <span class="mx-3">•</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Agritech</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 md:mt-0 md:ml-6 text-emerald-600 font-semibold hover:text-emerald-800 whitespace-nowrap">Read →</a>
+                </div>
+                <!-- Recent Post 3 -->
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Top 10 Kenyan Tech Startups to Watch in 2025</h3>
+                        <p class="text-gray-600 text-sm mb-2">From fintech to logistics, these homegrown startups are solving uniquely African problems with innovative technology solutions.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>October 22, 2025</span>
+                            <span class="mx-3">•</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">Startups</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 md:mt-0 md:ml-6 text-emerald-600 font-semibold hover:text-emerald-800 whitespace-nowrap">Read →</a>
+                </div>
+                <!-- Recent Post 4 -->
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Nairobi Ranked Among Top African Tech Cities</h3>
+                        <p class="text-gray-600 text-sm mb-2">New research places Kenya's capital in the top 3 African cities for tech talent, startup funding, and innovation ecosystem.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>October 19, 2025</span>
+                            <span class="mx-3">•</span>
+                            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Innovation</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 md:mt-0 md:ml-6 text-emerald-600 font-semibold hover:text-emerald-800 whitespace-nowrap">Read →</a>
+                </div>
+                <!-- Recent Post 5 -->
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col md:flex-row items-start md:items-center">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Building Apps with Flutter: Nairobi Developer Meetup Recap</h3>
+                        <p class="text-gray-600 text-sm mb-2">Key takeaways from last week's developer community gathering on cross-platform mobile development with Flutter.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>October 16, 2025</span>
+                            <span class="mx-3">•</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Developers</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 md:mt-0 md:ml-6 text-emerald-600 font-semibold hover:text-emerald-800 whitespace-nowrap">Read →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="py-20 px-6 bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
+        <div class="container mx-auto max-w-3xl text-center">
+            <i class="fas fa-newspaper text-5xl mb-6"></i>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the Nairobi Tech Community</h2>
+            <p class="text-xl mb-8">Get weekly updates on Kenya's tech scene, startup news, and innovation stories!</p>
+            <form class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Enter your email address" class="flex-grow px-6 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-4 focus:ring-emerald-300 max-w-md" required>
+                <button type="submit" class="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">Subscribe</button>
+            </form>
+            <p class="text-sm mt-4 text-emerald-100">Join 5,000+ tech enthusiasts. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-laptop-code mr-2"></i>Nairobi Tech Space
+                    </h3>
+                    <p class="text-gray-400">Covering Kenya's vibrant technology ecosystem, startup stories, and digital innovation from the heart of Silicon Savannah.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Write for Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Advertise</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-emerald-600 transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-emerald-600 transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-emerald-600 transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-emerald-600 transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-emerald-600 transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">📍 Nairobi, Kenya</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Nairobi Tech Space. All rights reserved. Proudly covering Silicon Savannah <i class="fas fa-heart text-emerald-500"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
